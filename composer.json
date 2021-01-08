@@ -1,0 +1,32 @@
+{
+    "name": "netflex/scraper",
+    "description": "Library for scraping metadata",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Alrek",
+            "email": "thomas@apility.no"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Netflex\\Scraper\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/support": "^8.0",
+        "netflex/support": "^3.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Netflex\\Scraper\\Providers\\ScraperServiceProvider"
+            ],
+            "aliases": {
+                "Scraper": "Netflex\\Scraper\\Facades\\Scraper"
+            }
+        }
+    }
+}
